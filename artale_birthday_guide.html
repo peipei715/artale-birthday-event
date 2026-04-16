@@ -329,6 +329,7 @@ td.name { color: var(--text); }
     <button class="nav-btn" onclick="showTab('total')">總收益統計</button>
     <button class="nav-btn" onclick="showTab('plan')">我的兌換計劃</button>
     <button class="nav-btn" onclick="showTab('hottime')">Hot Time &amp; 加成</button>
+    <button class="nav-btn" onclick="showTab('progress')" style="border-color:rgba(155,114,245,0.4); color:#b89ef8;">📈 累積進度追蹤</button>
   </div>
 </div>
 
@@ -914,12 +915,170 @@ td.name { color: var(--text); }
 
 </div><!-- /main -->
 
+<!-- ══════════════════════════════════ 累積進度追蹤 ══════════════════════════════════ -->
+<div id="sec-progress" class="section">
+  <div class="sec-title"><span class="icon">📈</span> 累積進度追蹤</div>
+
+  <div class="card" style="border-color:rgba(155,114,245,0.25);">
+    <div style="font-size:13px; color:var(--text2); line-height:1.7; margin-bottom:12px;">
+      以下數字為<strong style="color:var(--text);">確定來源</strong>的最低保底值（不含狩獵掉落、栽培楓樹機率掉落、蠟燭任務未公布部分）。<br>
+      假設條件：一次性任務於<strong style="color:var(--text);">第1週完成</strong>，組隊任務<strong style="color:var(--text);">每週通關4次</strong>，炎魔<strong style="color:var(--text);">每週打7次</strong>。
+    </div>
+    <div style="display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; font-size:13px; color:var(--text2);">
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--maple); margin-right:5px;"></span>楓葉</span>
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--gold); margin-right:5px;"></span>黃金楓葉</span>
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--coin); margin-right:5px;"></span>菇菇商店金幣</span>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0; overflow:hidden;">
+    <table style="width:100%; border-collapse:collapse; font-size:13px;">
+      <thead>
+        <tr>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left; white-space:nowrap;">週次</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left;">重置日</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">楓葉（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">黃金楓葉（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">金幣（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left;">兌換解鎖提示</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 1 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/16 ～ 4/22</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 4,200</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 31</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">14</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(155,114,245,0.15); color:#b89ef8; border:1px solid rgba(155,114,245,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🌟 黃金楓葉商店全部計劃可兌換！</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">GL 31個 → 用 25 → 剩 6（經驗券×15 + 紅藥水×10組）</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 2 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/23 ～ 4/29</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 7,500</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 46</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">28</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 經驗2倍券×10</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 28 → 用 20 → 剩 8</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 3 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/30 ～ 5/6</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 10,800</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 61</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">42</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:var(--bg4); color:var(--text2); border:1px solid var(--border2); border-radius:4px; font-size:11px; padding:2px 8px;">累積中，下週可換楓葉</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 4 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/7 ～ 5/13</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 14,100</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 76</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">56</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 楓葉×2500</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 56 → 再用 25（累計 45）→ 剩 11</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 5 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/14 ～ 5/20</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 17,400</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 91</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">70</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 黃金楓葉×5</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 70 → 再用 25（累計 70）→ 剩 0</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 6 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/21 ～ 5/27</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 20,700</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 106</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">84</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 瞬移石×7（最後）</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 84 → 再用 14（累計 84）→ 0，全部用盡 ✓</div>
+          </td>
+        </tr>
+        <tr style="background:var(--bg3);">
+          <td style="padding:10px 12px; color:var(--text); font-weight:700;">5/28</td>
+          <td style="padding:10px 12px; color:var(--text2);">活動結束</td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-leaf">≥ 22,900</span></td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-gl">≥ 111</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">兌換後剩 ≥ 86</div></td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-coin" style="background:var(--green-bg); color:var(--green); border-color:var(--green-border);">0（全用完）</span></td>
+          <td style="padding:10px 12px; color:var(--text2); font-size:12px;">維護前完成所有兌換</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:4px;">
+    <div class="card-title" style="margin-bottom:12px;">📌 兌換時程一覽</div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--purple); padding-top:1px;">第1週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">4/22 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🌟 <strong>黃金楓葉商店：全部計劃兌換完畢</strong></div>
+          <div style="font-size:12px; color:var(--text2);">用 25 黃金楓葉 → 經驗2倍券×15 + 高濃縮紅色藥水×10組。剩餘 ≥6 個繼續累積。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第2週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">4/29 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店①：兌換 經驗2倍券×10</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 28，用 20 幣。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第4週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/13 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店②：兌換 楓葉×2500（5組）</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 56，再用 25 幣。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第5週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/20 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店③：兌換 黃金楓葉×5</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 70，再用 25 幣。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0;">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第6週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/27 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店④（最後）：兌換 高級瞬移石×7</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 84，再用 14 幣，金幣全部用盡。<span style="color:var(--green); font-weight:700;"> 活動結束前完成！</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:rgba(155,114,245,0.06); border-color:rgba(155,114,245,0.2);">
+    <div style="font-size:13px; color:#c4b0f8; line-height:1.8;">
+      <strong style="color:#b89ef8;">💡 注意事項</strong><br>
+      ・楓葉數字未含狩獵掉落與栽培楓樹機率掉落，實際到手會<strong>更多</strong>。<br>
+      ・黃金楓葉未含每週蠟燭任務（數量未公布）與栽培楓樹機率掉落，實際也會更多。<br>
+      ・週次以週四重置為基準，第1週從 4/16（活動開始日）算起。<br>
+      ・菇菇商店金幣帳號總限額不隨日重置，不急著換，可依優先序按時程慢慢兌換。
+    </div>
+  </div>
+</div>
+
 <script>
 function showTab(id) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('sec-' + id).classList.add('active');
-  const ids = ['daily','weekly','once','shops','total','plan','hottime'];
+  const ids = ['daily','weekly','once','shops','total','plan','hottime','progress'];
   document.querySelectorAll('.nav-btn')[ids.indexOf(id)].classList.add('active');
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
