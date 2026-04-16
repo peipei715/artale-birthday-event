@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artale 一週年生日派對 — 活動攻略</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0f14;
+  --bg2: #161820;
+  --bg3: #1e2028;
+  --bg4: #252730;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #e8e9f0;
+  --text2: #9294a8;
+  --text3: #5e6075;
+  --maple: #e8622a;
+  --maple-l: #f4935f;
+  --maple-bg: rgba(232,98,42,0.12);
+  --maple-border: rgba(232,98,42,0.3);
+  --gold: #f5b830;
+  --gold-l: #fad06a;
+  --gold-bg: rgba(245,184,48,0.1);
+  --gold-border: rgba(245,184,48,0.3);
+  --coin: #e05252;
+  --coin-bg: rgba(224,82,82,0.1);
+  --coin-border: rgba(224,82,82,0.3);
+  --blue: #4e8ef7;
+  --blue-bg: rgba(78,142,247,0.1);
+  --blue-border: rgba(78,142,247,0.3);
+  --green: #3dba7e;
+  --green-bg: rgba(61,186,126,0.1);
+  --green-border: rgba(61,186,126,0.3);
+  --purple: #9b72f5;
+  --purple-bg: rgba(155,114,245,0.1);
+  --yellow-bg: rgba(250,208,106,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border2);
+  padding: 20px 24px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.header-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.header-period {
+  font-size: 12px;
+  color: var(--text2);
+}
+.nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text2);
+  font-size: 12px;
+  font-family: 'Noto Sans TC', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.nav-btn:hover { background: var(--bg3); color: var(--text); }
+.nav-btn.active { background: var(--maple-bg); color: var(--maple-l); border-color: var(--maple-border); }
+
+/* ── LAYOUT ── */
+.main { max-width: 960px; margin: 0 auto; padding: 24px 20px 60px; }
+.section { display: none; animation: fadeIn 0.2s ease; }
+.section.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── SECTION TITLE ── */
+.sec-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec-title .icon { font-size: 18px; }
+
+/* ── CARD ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+.card:hover { border-color: var(--border2); }
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.sub-label {
+  font-size: 11px;
+  color: var(--text3);
+  margin: 10px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── BADGES ── */
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.badge-daily { background: rgba(245,184,48,0.15); color: var(--gold); border: 1px solid rgba(245,184,48,0.25); }
+.badge-weekly { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.badge-once { background: var(--bg4); color: var(--text2); border: 1px solid var(--border2); }
+.badge-passive { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+
+/* ── TASK ROWS ── */
+.task-list { display: flex; flex-direction: column; gap: 0; }
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.task-row:last-child { border-bottom: none; padding-bottom: 0; }
+.task-desc { flex: 1; color: var(--text2); font-size: 13px; line-height: 1.5; }
+.task-desc strong { color: var(--text); font-weight: 500; }
+.task-reward { text-align: right; white-space: nowrap; }
+
+/* ── TAGS ── */
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.tag-leaf { background: var(--maple-bg); color: var(--maple-l); border: 1px solid var(--maple-border); }
+.tag-gl { background: var(--gold-bg); color: var(--gold-l); border: 1px solid var(--gold-border); }
+.tag-coin { background: var(--coin-bg); color: var(--coin); border: 1px solid var(--coin-border); }
+.tag-blue { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+.tag-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.tag-gray { background: var(--bg4); color: var(--text2); border: 1px solid var(--border2); }
+
+/* ── TABLE ── */
+.tbl-wrap { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  background: var(--bg3);
+  color: var(--text3);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 12px;
+  text-align: left;
+}
+tbody td { padding: 9px 12px; border-bottom: 1px solid var(--border); color: var(--text2); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: var(--bg3); }
+td.name { color: var(--text); }
+
+/* ── METRIC CARDS ── */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.metric {
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+}
+.metric-label { font-size: 11px; color: var(--text3); margin-bottom: 4px; }
+.metric-val { font-size: 26px; font-weight: 700; font-family: 'Oswald', sans-serif; }
+.metric-val.gold { color: var(--gold); }
+.metric-val.maple { color: var(--maple); }
+.metric-val.blue { color: var(--blue); }
+.metric-val.green { color: var(--green); }
+.metric-sub { font-size: 11px; color: var(--text3); margin-top: 3px; }
+
+/* ── INFO / NOTE BOX ── */
+.note-box {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.note-box.warn { background: var(--gold-bg); color: var(--gold-l); border: 1px solid var(--gold-border); }
+.note-box.good { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+.note-box.info { background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+.note-box.neutral { background: var(--bg3); color: var(--text2); border: 1px solid var(--border2); }
+
+/* ── PLAN ROWS ── */
+.plan-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.plan-row:last-child { border-bottom: none; }
+.plan-left { color: var(--text2); flex: 1; }
+.plan-left strong { color: var(--text); font-weight: 500; }
+.plan-right { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.plan-total {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+.plan-total .label { color: var(--text2); }
+.plan-total .value { font-weight: 700; font-family: 'Oswald', sans-serif; font-size: 16px; }
+
+/* ── PROGRESS BAR ── */
+.pbar-wrap { margin-top: 8px; }
+.pbar-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--text3); margin-bottom: 4px; }
+.pbar-bg { height: 6px; background: var(--bg4); border-radius: 3px; overflow: hidden; }
+.pbar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+
+/* ── HOT TIME GRID ── */
+.hottime-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+@media (max-width: 600px) {
+  .hottime-grid { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr 1fr; }
+  .header-top { flex-direction: column; gap: 4px; }
+}
+.hottime-card {
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+}
+.hottime-phase {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.hottime-dates { font-size: 12px; color: var(--text3); margin-bottom: 10px; line-height: 1.5; }
+.buff-list { display: flex; flex-direction: column; gap: 4px; }
+.buff-item { font-size: 12px; color: var(--text2); display: flex; align-items: center; gap: 6px; }
+.buff-item::before { content: ''; display: block; width: 4px; height: 4px; border-radius: 50%; background: var(--maple); flex-shrink: 0; }
+.buff-item.strong::before { background: var(--gold); }
+
+/* ── SHOP TABLE SPECIFIC ── */
+.cost-cell { font-weight: 700; }
+
+/* ── GRID 2 COL ── */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 580px) { .grid2 { grid-template-columns: 1fr; } }
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+/* ── SURPLUS HIGHLIGHT ── */
+.surplus-row td { color: var(--green) !important; font-weight: 700; }
+.total-row td { color: var(--text) !important; font-weight: 700; background: var(--bg3) !important; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="header-title">🍁 Artale 一週年生日派對</div>
+    <div class="header-period">活動期間：2026/04/16（四）～ 2026/05/28（四）共 6 週</div>
+  </div>
+  <div class="nav">
+    <button class="nav-btn active" onclick="showTab('daily')">每日任務</button>
+    <button class="nav-btn" onclick="showTab('weekly')">每週任務</button>
+    <button class="nav-btn" onclick="showTab('once')">一次性任務</button>
+    <button class="nav-btn" onclick="showTab('shops')">商店兌換</button>
+    <button class="nav-btn" onclick="showTab('total')">總收益統計</button>
+    <button class="nav-btn" onclick="showTab('plan')">我的兌換計劃</button>
+    <button class="nav-btn" onclick="showTab('hottime')">Hot Time &amp; 加成</button>
+    <button class="nav-btn" onclick="showTab('progress')" style="border-color:rgba(155,114,245,0.4); color:#b89ef8;">📈 累積進度追蹤</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══════════════════════════════════ 每日任務 ══════════════════════════════════ -->
+<div id="sec-daily" class="section active">
+  <div class="sec-title"><span class="icon">📅</span> 每日任務</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🎂 再把蛋糕找回來吧！</div>
+      <span class="badge badge-daily">每日重置 08:00</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">前往卡蜜拉的農場，擊殺 <strong>綠水靈、肥肥、綠菇菇</strong> 各 5 隻，分別蒐集切片蛋糕 A/B/C 各 5 個，完成後回報 GM 露露</div>
+        <div class="task-reward"><span class="tag tag-leaf">楓葉 ×300</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">6 週合計</div>
+        <div class="task-reward"><span class="tag tag-leaf">楓葉 ×12,600</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🌳 1週年紀念栽培楓樹</div>
+      <span class="badge badge-daily">每日重置 08:00</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">向 NPC <strong>加加</strong> 接取任務，取得楓樹種子。狩獵等級範圍（±30，120等以上需90等+）怪物蒐集「樹木喜歡的陽光」，使種子成長後回報，取得楓樹果實</div>
+        <div class="task-reward"><span class="tag tag-gray">準備果實</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">進入楓樹山丘（隊長限定，5 分鐘），種下果實，投入陽光 4 次使大楓樹出現並破壞它</div>
+        <div class="task-reward"><span class="tag tag-leaf">楓葉</span> + <span class="tag tag-gl" style="margin-left:4px;">黃金楓葉</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">機率掉落</div></div>
+      </div>
+    </div>
+    <div class="note-box neutral" style="margin-top:10px;">⚠️ 持有 30 個陽光製作的楓樹種子時無法接取任務</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">✅ 週年登入簽到</div>
+      <span class="badge badge-daily">每日重置 08:00</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">擊殺 <strong>250 隻</strong> 符合等級範圍怪物即完成當日簽到（30 等以上參與）</div>
+        <div class="task-reward"><span class="tag tag-gray">每日獎勵</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">活動期間 <strong>共可領取 28 次</strong>，無需連續，含 2 倍券、Maple 聊天戒指＆名牌戒指等</div>
+        <div class="task-reward"><span class="tag tag-blue">合計 28 次</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🔥 週年氣息</div>
+      <span class="badge badge-passive">自動觸發，每日 15 次上限</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">每擊殺 <strong>75 隻</strong> 符合等級怪物自動觸發：<strong>2 分鐘內狩獵經驗值 2 倍</strong><br>可輸入 <code style="background:var(--bg4); padding:1px 5px; border-radius:3px; font-size:11px;">/氣場</code> 確認剩餘次數</div>
+        <div class="task-reward"><span class="tag tag-blue">上限 15 次/天</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🏰 公會幣捐贈</div>
+      <span class="badge badge-daily">每日限 1 次</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">首次登入後維持在線 <strong>30 分鐘</strong>（中斷需重計），領取公會幣</div>
+        <div class="task-reward"><span class="tag tag-gray">公會幣 ×1</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">17:00～02:00 前往自由市場公會士兵進行捐贈（加入公會滿 1 天後才可捐）<br><span style="font-size:11px; color:var(--text3);">活動結束後依最終排名發放獎勵給前 30 名公會，每週四更新排名</span></div>
+        <div class="task-reward"><span class="tag tag-gray">公會積分</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ 每週任務 ══════════════════════════════════ -->
+<div id="sec-weekly" class="section">
+  <div class="sec-title"><span class="icon">📆</span> 每週任務</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🕯️ 尋找隱藏的蠟燭</div>
+      <span class="badge badge-weekly">每週重置 週四 08:00</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">透過 GM 露露接取任務，在以下 18 個地區（世界旅行地區除外）尋找隱藏的 1 週年寶箱，蒐集 4 根蠟燭交回</div>
+        <div class="task-reward"><span class="tag tag-gl">黃金楓葉</span><div style="font-size:11px; color:var(--text3); text-align:right;">數量未公布</div></div>
+      </div>
+    </div>
+    <div class="sub-label">可出現地區</div>
+    <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:4px;">
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">弓箭手村</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">奇幻村</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">玩具城</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">魔法森林</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">鯨魚號碼頭</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">桃花仙境</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">維多利亞港</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">天空之城</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">靈藥幻境</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">墮落城市</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">冰原雪域</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">水世界</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">勇士之村</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">地球防衛本部</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">下面的村子</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">神木村</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">納希綠洲城</span>
+      <span class="badge badge-once" style="font-size:11px; text-transform:none; letter-spacing:0; font-weight:400;">瑪迦提亞城</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🎂 弓箭手村蛋糕大騷動（組隊任務）</div>
+      <span class="badge badge-weekly">每週重置 週四 08:00</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">組 <strong>4 人隊伍</strong>，30 分鐘內通關 6 個 Stage，擊敗 BOSS 巧克力中毒超級綠水靈<br><span style="font-size:11px; color:var(--text3);">每週打一場，依週次累積對應到第幾次通關獎勵（每週限領一次）；第 4 週後不再有回次獎勵</span></div>
+        <div class="task-reward"><span class="tag tag-gray">13等以上</span></div>
+      </div>
+    </div>
+    <div class="sub-label" style="margin-top:12px;">通關獎勵明細</div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>回次（週次）</th><th>獎勵內容</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td class="name">每週 Stage 1～6 通關</td><td><span class="tag tag-leaf">楓葉 ×200／格</span>，共 6 格</td><td>每週皆有，合計 <span class="tag tag-leaf">×1,200/週</span></td></tr>
+          <tr><td class="name">第 1 次（第 1 週）</td><td><span class="tag tag-gl">黃金楓葉 ×5</span> + 經驗2倍券×2 + 掉落2倍券×2</td><td>—</td></tr>
+          <tr><td class="name">第 2 次（第 2 週）</td><td><span class="tag tag-gl">黃金楓葉 ×5</span> + 經驗2倍券×2 + 掉落2倍券×2</td><td>—</td></tr>
+          <tr><td class="name">第 3 次（第 3 週）</td><td><span class="tag tag-gl">黃金楓葉 ×5</span> + 經驗2倍券×2 + 掉落2倍券×2</td><td>—</td></tr>
+          <tr><td class="name">第 4 次（第 4 週）</td><td>🪑 一週年紀念蛋糕椅子（坐下每10秒 HP/MP +111）</td><td>限定，第5/6週無回次獎勵</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box neutral">6 週活動共獲得：<span class="tag tag-leaf">楓葉 ×7,200</span>（6週×1200）+ <span class="tag tag-gl">黃金楓葉 ×15</span>（前3週）+ 經驗2倍券×6 + 掉落2倍券×6 + 蛋糕椅子×1</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🐷 擊敗黃金豬！</div>
+      <span class="badge badge-weekly">每週五、六、日</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">黃金豬出現時間：<strong>11 / 14 / 17 / 20 / 23 點</strong>，共每日 5 次。與 GM 露露對話前往黃金豬的寶物倉庫，擊敗後獲得黃金豬寶箱（獎勵不可交易）</div>
+        <div class="task-reward"><span class="tag tag-gray">黃金豬寶箱</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">週五六日各 5 次</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ 一次性任務 ══════════════════════════════════ -->
+<div id="sec-once" class="section">
+  <div class="sec-title"><span class="icon">🎯</span> 一次性任務</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🎁 楓樹準備的1週年禮物</div>
+      <span class="badge badge-once">一次性</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">與 GM 露露前往 1 週年楓葉山丘，和楓樹對話接取任務</div>
+        <div class="task-reward"></div>
+      </div>
+      <div class="task-row">
+        <div class="task-desc">找 <strong>瑪亞</strong> 取得楓葉碎片 ×1，再找 <strong>長老斯坦</strong> 正確回答問題取得楓葉碎片 ×1</div>
+        <div class="task-reward"><span class="tag tag-gray">楓葉碎片 ×2</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">蒐集 楓葉碎片 ×2 後與楓樹對話</div>
+        <div class="task-reward"><span class="tag tag-gl">黃金楓葉 ×5</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">✉️ Artale 的1週年生日派對準備</div>
+      <span class="badge badge-once">一次性連續任務</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">【任務一：吹散的邀請函】擊殺等級範圍怪物，蒐集「1週年生日派對邀請函 ×5」</div>
+        <div class="task-reward"><span class="tag tag-leaf">楓葉 ×200</span> <span class="tag tag-gl" style="margin-left:4px;">黃金楓葉 ×2</span><div style="font-size:11px; color:var(--text3); text-align:right;">+鮮奶油小蛋糕×20</div></div>
+      </div>
+      <div class="task-row">
+        <div class="task-desc">【任務二：消失的生日蛋糕】擊殺等級範圍怪物，蒐集「砂糖 ×30」</div>
+        <div class="task-reward"><span class="tag tag-leaf">楓葉 ×200</span> <span class="tag tag-gl" style="margin-left:4px;">黃金楓葉 ×2</span><div style="font-size:11px; color:var(--text3); text-align:right;">+鮮奶油小蛋糕×20</div></div>
+      </div>
+      <div class="task-row">
+        <div class="task-desc">【任務三：傳達消息】幫 GM 露露傳遞給長老斯坦、漢斯、酋長、內拉、黑巴克（各 +1 名聲）</div>
+        <div class="task-reward"><span class="tag tag-gray">名聲 ×5</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">完成全部任務回報 GM 露露</div>
+        <div class="task-reward">
+          <span class="tag tag-gray">蛋糕盒</span>
+          <div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">楓葉×200、黃金楓葉×2</div>
+          <div style="font-size:11px; color:var(--text3); text-align:right;">巧克力小蛋糕×20</div>
+          <div style="font-size:11px; color:var(--gold); text-align:right; margin-top:2px;">🎖️ 勳章「Artale 1週年快樂」</div>
+        </div>
+      </div>
+    </div>
+    <div class="note-box neutral" style="margin-top:10px;">勳章能力：STR/DEX/INT/LUK +3、攻擊 +1、魔攻 +2、MaxHP/MP +500（2026/6/4 後轉為老練冒險家勳章能力值）</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">🃏 加加遺失的怪物卡片</div>
+      <span class="badge badge-once">一次性</span>
+    </div>
+    <div class="task-list">
+      <div class="task-row">
+        <div class="task-desc">擊殺等級範圍怪物，機率獲得 <strong>蒙面河豚卡片 ×10</strong>、<strong>火燄半人馬卡片 ×10</strong></div>
+        <div class="task-reward"><span class="tag tag-gray">狩獵取得</span></div>
+      </div>
+      <div class="task-row">
+        <div class="task-desc">前往弓箭手村遊戲中心找 <strong>NPC 凱茜</strong>，協助蒐集螺絲釘與螺絲起子，取得 <strong>殘暴炎魔卡片 ×1</strong>、<strong>寒霜冰龍卡片 ×1</strong></div>
+        <div class="task-reward"><span class="tag tag-gray">NPC 任務</span></div>
+      </div>
+      <div class="task-row" style="border-bottom:none; padding-bottom:0;">
+        <div class="task-desc">四種卡片蒐集完成，回報 NPC <strong>加加</strong></div>
+        <div class="task-reward"><span class="tag tag-gl">黃金楓葉 ×5</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">+變身祕藥箱×5</div><div style="font-size:11px; color:var(--text3); text-align:right;">+草莓鮮奶油蛋糕×20</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ 商店兌換 ══════════════════════════════════ -->
+<div id="sec-shops" class="section">
+  <div class="sec-title"><span class="icon">🛒</span> 商店兌換</div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">🌟 加加的黃金楓葉商店</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>道具</th><th>數量/組</th><th>所需黃金楓葉</th><th>帳號兌換上限</th></tr></thead>
+        <tbody>
+          <tr><td class="name">經驗值 2 倍券 (30分)</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×1</span></td><td>15 個</td></tr>
+          <tr><td class="name">掉落率 2 倍券 (30分)</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×1</span></td><td>15 個</td></tr>
+          <tr><td class="name">高濃縮紅色藥水</td><td>3 個</td><td class="cost-cell"><span class="tag tag-gl">×1</span></td><td>10 組（=30個）</td></tr>
+          <tr><td class="name">高濃縮藍色藥水</td><td>3 個</td><td class="cost-cell"><span class="tag tag-gl">×1</span></td><td>10 組（=30個）</td></tr>
+          <tr><td class="name">楓葉（力量）</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×5</span></td><td>15 個</td></tr>
+          <tr><td class="name">楓葉（敏捷）</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×5</span></td><td>15 個</td></tr>
+          <tr><td class="name">楓葉（智力）</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×5</span></td><td>15 個</td></tr>
+          <tr><td class="name">楓葉（幸運）</td><td>1 個</td><td class="cost-cell"><span class="tag tag-gl">×5</span></td><td>15 個</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">🪙 菇菇商店（1週年特別金幣）</div></div>
+    <div class="note-box info" style="margin-bottom:12px;">金幣取得：擊敗 <strong>普通拉圖斯 → ×1</strong>　｜　<strong>普通殘暴炎魔 → ×2</strong>　｜　<strong>困難拉圖斯 → ×3</strong></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>道具</th><th>所需金幣</th><th>帳號兌換上限</th><th>可否交易</th></tr></thead>
+        <tbody>
+          <tr><td class="name">經驗值 2 倍券 (30分)</td><td><span class="tag tag-coin">2</span></td><td>10 個</td><td>不可</td></tr>
+          <tr><td class="name">掉落率 2 倍券 (30分)</td><td><span class="tag tag-coin">2</span></td><td>10 個</td><td>不可</td></tr>
+          <tr><td class="name">楓葉 ×500</td><td><span class="tag tag-coin">5</span></td><td>5 次</td><td>可以</td></tr>
+          <tr><td class="name">黃金楓葉 ×1</td><td><span class="tag tag-coin">5</span></td><td>5 個</td><td>不可</td></tr>
+          <tr><td class="name">高級瞬移之石 ×1</td><td><span class="tag tag-coin">2</span></td><td>10 個</td><td>不可</td></tr>
+          <tr><td class="name">凍結加持器 ×1</td><td><span class="tag tag-coin">2</span></td><td>10 個</td><td>不可</td></tr>
+          <tr><td class="name">護身符咒 ×1</td><td><span class="tag tag-coin">2</span></td><td>10 個</td><td>不可</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box neutral">商店每日 08:00 重置（帳號總量上限不重置）；楓葉 ×500 以外的商品不可交易</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">💊 小薇安藥水商店</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>道具</th><th>效果</th><th>每日限購</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td class="name">白色藥丸 ×10</td><td>HP +300</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">烤肉 ×10</td><td>HP +100</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">熱狗堡 ×10</td><td>HP +500</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">烤鰻魚 ×10</td><td>HP +1000</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">柳橙 ×10</td><td>MP +50</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">活力藥丸 ×10</td><td>MP +300</td><td>5 組/天</td><td>不可交易</td></tr>
+          <tr><td class="name">礦泉水 ×10</td><td>MP +800</td><td>5 組/天</td><td>不可交易</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box neutral">用遊戲幣購買，每日 08:00 重置。另：500 楓葉可向小薇安換 1 黃金楓葉</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">🍁 加加＆GM 露露的楓葉商店</div></div>
+    <div class="task-row" style="border-bottom:none; padding:4px 0 0;">
+      <div class="task-desc">以狩獵掉落或活動獎勵累積的 <span class="tag tag-leaf">楓葉</span> 與 <span class="tag tag-gl">黃金楓葉</span> 向加加或 GM 露露兌換裝備、防具、飾品、柔軟的楓葉箱子、模糊的楓葉箱子、永恆卷軸等</div>
+      <div class="task-reward"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ 總收益統計 ══════════════════════════════════ -->
+<div id="sec-total" class="section">
+  <div class="sec-title"><span class="icon">📊</span> 全程活動總收益統計</div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-label">楓葉（確定來源）</div>
+      <div class="metric-val maple">22,900+</div>
+      <div class="metric-sub">不含狩獵掉落</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">黃金楓葉（確定來源）</div>
+      <div class="metric-val gold">34+</div>
+      <div class="metric-sub">不含蠟燭任務/栽培楓樹</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">1週年特別金幣</div>
+      <div class="metric-val blue">84</div>
+      <div class="metric-sub">炎魔×7/週 × 6週</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">經驗值 2 倍券（組隊任務）</div>
+      <div class="metric-val green">6+</div>
+      <div class="metric-sub">不含登入簽到</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">楓葉來源明細</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>來源</th><th>頻率</th><th>單次</th><th>活動全期合計</th></tr></thead>
+        <tbody>
+          <tr><td class="name">每日蛋糕任務</td><td>每日（42天）</td><td>300</td><td><span class="tag tag-leaf">12,600</span></td></tr>
+          <tr><td class="name">組隊任務 Stage 通關</td><td>每週 6 格 × 6 週</td><td>200/格</td><td><span class="tag tag-leaf">7,200</span></td></tr>
+          <tr><td class="name">一次性派對準備（任務1+2）</td><td>一次</td><td>200×2</td><td><span class="tag tag-leaf">400</span></td></tr>
+          <tr><td class="name">一次性派對準備（蛋糕盒）</td><td>一次</td><td>200</td><td><span class="tag tag-leaf">200</span></td></tr>
+          <tr><td class="name">菇菇商店兌換（你的計劃）</td><td>一次性（上限）</td><td>500×5</td><td><span class="tag tag-leaf">2,500</span></td></tr>
+          <tr class="total-row"><td>確定來源合計</td><td colspan="2">—</td><td><span class="tag tag-leaf">22,900</span></td></tr>
+          <tr><td>狩獵掉落、栽培楓樹</td><td>每日</td><td colspan="2" style="color:var(--text3);">機率，未計入</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">黃金楓葉來源明細</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>來源</th><th>頻率</th><th>活動全期合計</th></tr></thead>
+        <tbody>
+          <tr><td class="name">組隊任務（第1~3次各×5）</td><td>×3次，前3週各1次</td><td><span class="tag tag-gl">15</span></td></tr>
+          <tr><td class="name">一次性：怪物卡片任務</td><td>一次</td><td><span class="tag tag-gl">5</span></td></tr>
+          <tr><td class="name">一次性：楓樹禮物</td><td>一次</td><td><span class="tag tag-gl">5</span></td></tr>
+          <tr><td class="name">一次性：派對準備（任務1+2+蛋糕盒）</td><td>一次</td><td><span class="tag tag-gl">6</span></td></tr>
+          <tr><td class="name">菇菇商店兌換（你的計劃）</td><td>一次性</td><td><span class="tag tag-gl">3</span></td></tr>
+          <tr class="total-row"><td>確定來源合計</td><td>—</td><td><span class="tag tag-gl">34</span></td></tr>
+          <tr><td>每週蠟燭任務</td><td>每週</td><td style="color:var(--text3);">數量未公布，未計入</td></tr>
+          <tr><td>每日栽培楓樹</td><td>每日</td><td style="color:var(--text3);">機率，未計入</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">2 倍券來源明細</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>來源</th><th>類型</th><th>數量</th></tr></thead>
+        <tbody>
+          <tr><td class="name">組隊任務（第1~3次，×2/次）</td><td>經驗＋掉落各</td><td><span class="tag tag-blue">各 6 張</span>（前3週，每週×2）</td></tr>
+          <tr><td class="name">菇菇商店（你的計劃）</td><td>經驗</td><td><span class="tag tag-blue">10 張</span></td></tr>
+          <tr><td class="name">黃金楓葉商店（你的計劃）</td><td>經驗</td><td><span class="tag tag-blue">15 張</span></td></tr>
+          <tr><td class="name">登入簽到（28 天）</td><td>經驗＋掉落混合</td><td style="color:var(--text3);">多張，詳見日程</td></tr>
+          <tr class="total-row"><td>經驗值 2 倍券合計（不含簽到）</td><td>—</td><td><span class="tag tag-blue">31 張以上</span></td></tr>
+          <tr class="total-row"><td>掉落率 2 倍券合計（不含簽到）</td><td>—</td><td><span class="tag tag-blue">6 張以上</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">其他獎勵</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>道具</th><th>數量</th><th>備註</th></tr></thead>
+        <tbody>
+          <tr><td class="name">🎖️ 勳章「Artale 1週年快樂」</td><td>1</td><td>STR/DEX/INT/LUK+3, 攻+1, 魔攻+2, HP/MP+500</td></tr>
+          <tr><td class="name">🪑 一週年紀念蛋糕椅子</td><td>1</td><td>組隊任務第4次通關（每週共4次後解鎖）</td></tr>
+          <tr><td class="name">Maple 聊天戒指＆名牌戒指</td><td>各 1</td><td>登入簽到</td></tr>
+          <tr><td class="name">高濃縮紅色藥水 ×3</td><td>10 組（你的計劃）</td><td>黃金楓葉商店兌換</td></tr>
+          <tr><td class="name">高級瞬移之石</td><td>10（你的計劃）</td><td>菇菇商店，換滿上限</td></tr>
+          <tr><td class="name">1週年鮮奶油小蛋糕</td><td>40</td><td>恢復 HP/MP 600，一次性派對任務</td></tr>
+          <tr><td class="name">1週年巧克力小蛋糕</td><td>20</td><td>恢復 HP/MP 1200，蛋糕盒內</td></tr>
+          <tr><td class="name">草莓鮮奶油蛋糕</td><td>20</td><td>10分鐘攻+5/魔攻+7，怪物卡片任務</td></tr>
+          <tr><td class="name">變身祕藥箱</td><td>5</td><td>各含5種變身藥水（加加/提肯/女孩/月亮/黃金豬）</td></tr>
+          <tr><td class="name">🐷 黃金豬寶箱</td><td>最多 18 箱</td><td>週五六日各5次，共6週</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ 兌換計劃 ══════════════════════════════════ -->
+<div id="sec-plan" class="section">
+  <div class="sec-title"><span class="icon">🗺️</span> 我的兌換計劃</div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-header"><div class="card-title">🪙 菇菇商店兌換計劃</div></div>
+      <div class="plan-row">
+        <div class="plan-left">炎魔每週 7 次 × 6 週，每次 +2 幣</div>
+        <div class="plan-right"><span class="tag tag-coin">可用金幣 84</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>① 優先</strong>　經驗值 2 倍券 ×10（2幣/個）</div>
+        <div class="plan-right"><span style="color:var(--coin);">−20</span> <span class="tag tag-gray" style="margin-left:4px;">剩 64</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>② 次優先</strong>　楓葉 ×500 × 5 組（5幣/組，上限5組）</div>
+        <div class="plan-right"><span style="color:var(--coin);">−25</span> <span class="tag tag-gray" style="margin-left:4px;">剩 39</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>③ 次優先</strong>　高級瞬移之石 ×10（2幣/個，換滿上限）</div>
+        <div class="plan-right"><span style="color:var(--coin);">−20</span> <span class="tag tag-gray" style="margin-left:4px;">剩 19</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>④ 最後</strong>　黃金楓葉（5幣/個，上限5個，盡量換）</div>
+        <div class="plan-right"><span style="color:var(--coin);">−15</span> <span class="tag tag-gray" style="margin-left:4px;">剩 4（用不完）</span></div>
+      </div>
+      <div class="note-box good" style="margin-top:10px;">
+        84 幣，花費 80，剩餘 4 幣無法使用 ✓<br>
+        經驗券×10 ／ 楓葉×2,500 ／ 瞬移石×10 ／ 黃金楓葉×3
+      </div>
+      <div class="note-box neutral" style="margin-top:8px;">💡 剩餘 4 幣不足再換任何道具（最低需 2 幣）。若改打 1 次困難拉圖斯可補 1 幣，但仍差 1 幣，影響不大</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div class="card-title">🌟 黃金楓葉商店兌換計劃</div></div>
+      <div class="plan-row">
+        <div class="plan-left">活動全程確定取得黃金楓葉</div>
+        <div class="plan-right"><span class="tag tag-gl">34 個以上</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>① 換完上限</strong>　經驗值 2 倍券 ×15（1個/幣）</div>
+        <div class="plan-right"><span style="color:var(--gold);">−15</span> <span class="tag tag-gray" style="margin-left:4px;">剩 19+</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left"><strong>② 換完上限</strong>　高濃縮紅色藥水 ×10 組（1組/幣）</div>
+        <div class="plan-right"><span style="color:var(--gold);">−10</span> <span class="tag tag-gray" style="margin-left:4px;">剩 9+</span></div>
+      </div>
+      <div class="plan-row">
+        <div class="plan-left">剩餘黃金楓葉 — 暫不安排，繼續累積</div>
+        <div class="plan-right"><span class="tag tag-gl">9 個以上保留</span></div>
+      </div>
+      <div class="note-box good" style="margin-top:10px;">
+        共花費 25 黃金楓葉 ✓<br>
+        剩餘 9 個以上繼續累積保存
+      </div>
+      <div class="note-box warn" style="margin-top:8px;">
+        ⚠️ 確定來源僅 34 個，扣除兌換後剩 9 個，緩衝空間較少。<br>蠟燭任務與栽培楓樹的額外掉落將是重要補充來源，建議優先完成每日栽培楓樹！
+      </div>
+      <div class="note-box neutral" style="margin-top:8px;">
+        💡 保留的黃金楓葉可後續考慮：<br>
+        ・掉落率2倍券×15 需 15個<br>
+        ・高濃縮藍色藥水×10組 需 10個<br>
+        ・楓葉四屬性各×15 需共 300個
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">黃金楓葉流向總覽</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>黃金楓葉異動</th><th>說明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">活動全程收入（確定來源）</td><td><span class="tag tag-gl">+34</span></td><td>組隊任務15、一次性任務16、菇菇商店3</td></tr>
+          <tr><td class="name">黃金楓葉商店兌換（你的計劃）</td><td style="color:var(--coin); font-weight:700;">−25</td><td>經驗券×15 + 高濃縮紅藥水×10組</td></tr>
+          <tr class="surplus-row"><td>期末剩餘保留</td><td>≥ 9</td><td>另加蠟燭任務、栽培楓樹未計入部分</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════ Hot Time & 加成 ══════════════════════════════════ -->
+<div id="sec-hottime" class="section">
+  <div class="sec-title"><span class="icon">🔥</span> Hot Time &amp; 全程加成</div>
+
+  <div class="hottime-grid">
+    <div class="hottime-card">
+      <div class="hottime-phase">第 1 階段 Hot Time</div>
+      <div class="hottime-dates">
+        4/17（五）～4/19（日）<br>
+        4/24（五）～4/26（日）<br>
+        每日 <strong>20:00～23:00</strong>
+      </div>
+      <div class="buff-list">
+        <div class="buff-item">經驗值 2 倍</div>
+        <div class="buff-item">掉落率 2 倍</div>
+        <div class="buff-item">攻擊力 +3</div>
+        <div class="buff-item">魔法攻擊力 +5</div>
+        <div class="buff-item">跳躍力 / 移動速度 +10</div>
+        <div class="buff-item">楓葉掉落率 2 倍（怪物掉落）</div>
+      </div>
+    </div>
+    <div class="hottime-card" style="border-color: rgba(245,184,48,0.2);">
+      <div class="hottime-phase" style="color:var(--gold);">第 2 階段 Hot Time（更強）</div>
+      <div class="hottime-dates">
+        5/1～5/3、5/8～5/10<br>
+        5/15～5/17、5/22～5/24<br>
+        每日 <strong>20:00～23:00</strong>
+      </div>
+      <div class="buff-list">
+        <div class="buff-item strong">經驗值 3 倍</div>
+        <div class="buff-item strong">掉落率 3 倍</div>
+        <div class="buff-item strong">攻擊力 +10</div>
+        <div class="buff-item strong">魔法攻擊力 +15</div>
+        <div class="buff-item strong">跳躍力 / 移動速度 +10</div>
+        <div class="buff-item strong">楓葉掉落率 2 倍（怪物掉落）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">🔥 全程常駐加成（活動期間全天有效）</div></div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>類型</th><th>條件</th><th>效果</th></tr></thead>
+        <tbody>
+          <tr><td class="name">狩獵經驗值倍率</td><td>Lv. 1 ～ 70</td><td style="color:var(--maple-l); font-weight:700;">3 倍</td></tr>
+          <tr><td class="name">狩獵經驗值倍率</td><td>Lv. 71 ～ 120</td><td style="color:var(--gold); font-weight:700;">2 倍</td></tr>
+          <tr><td class="name">符文解放 — 經驗值追加</td><td>依符文種類</td><td>+10% 或 +30%</td></tr>
+          <tr><td class="name">符文解放 — 掉落率追加</td><td>依符文種類</td><td>+10% 或 +30%</td></tr>
+          <tr><td class="name">符文解放 — 攻擊力追加</td><td>依符文種類</td><td>物理攻擊 +5 / 魔法攻擊 +10</td></tr>
+          <tr><td class="name">週年氣息</td><td>每擊殺75隻，每日上限15次</td><td>2 分鐘內狩獵經驗值 2 倍</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="card-title">📅 Hot Time 日曆速查</div></div>
+    <div style="display:grid; grid-template-columns: repeat(7, 1fr); gap:4px; text-align:center;">
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週一</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週二</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週三</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週四</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週五</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週六</div>
+      <div style="font-size:10px; color:var(--text3); padding:4px;">週日</div>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:12px; text-align:center; min-width:420px;">
+        <tbody id="calendar-body"></tbody>
+      </table>
+    </div>
+    <div style="display:flex; gap:12px; margin-top:10px; font-size:11px; flex-wrap:wrap;">
+      <span style="display:flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:rgba(232,98,42,0.25); border-radius:2px; display:inline-block;"></span> 第1階段 Hot Time</span>
+      <span style="display:flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:rgba(245,184,48,0.25); border-radius:2px; display:inline-block;"></span> 第2階段 Hot Time</span>
+      <span style="display:flex; align-items:center; gap:5px;"><span style="width:10px; height:10px; background:rgba(61,186,126,0.2); border-radius:2px; display:inline-block;"></span> 週年任務重置（週四）</span>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- ══════════════════════════════════ 累積進度追蹤 ══════════════════════════════════ -->
+<div id="sec-progress" class="section">
+  <div class="sec-title"><span class="icon">📈</span> 累積進度追蹤</div>
+
+  <div class="card" style="border-color:rgba(155,114,245,0.25);">
+    <div style="font-size:13px; color:var(--text2); line-height:1.7; margin-bottom:12px;">
+      以下數字為<strong style="color:var(--text);">確定來源</strong>的最低保底值（不含狩獵掉落、栽培楓樹機率掉落、蠟燭任務未公布部分）。<br>
+      假設條件：一次性任務於<strong style="color:var(--text);">第1週完成</strong>，組隊任務<strong style="color:var(--text);">每週通關4次</strong>，炎魔<strong style="color:var(--text);">每週打7次</strong>。
+    </div>
+    <div style="display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap; font-size:13px; color:var(--text2);">
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--maple); margin-right:5px;"></span>楓葉</span>
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--gold); margin-right:5px;"></span>黃金楓葉</span>
+      <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--coin); margin-right:5px;"></span>菇菇商店金幣</span>
+    </div>
+  </div>
+
+  <div class="card" style="padding:0; overflow:hidden;">
+    <table style="width:100%; border-collapse:collapse; font-size:13px;">
+      <thead>
+        <tr>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left; white-space:nowrap;">週次</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left;">重置日</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">楓葉（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">黃金楓葉（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:right;">金幣（週結束）</th>
+          <th style="padding:9px 12px; background:var(--bg3); color:var(--text3); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; text-align:left;">兌換解鎖提示</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 1 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/16 ～ 4/22</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 4,200</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 21</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">一次性×16＋組隊×5</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">14</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(155,114,245,0.15); color:#b89ef8; border:1px solid rgba(155,114,245,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🌟 黃金楓葉商店全部計劃可兌換！</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">GL 21個 → 用 25 → <span style="color:var(--coin);">不夠！需等第3週（GL≥31）</span></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 2 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/23 ～ 4/29</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 7,500</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 26</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">+組隊×5</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">28</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 經驗2倍券×10</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 28 → 用 20 → 剩 8</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 3 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">4/30 ～ 5/6</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 10,800</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 31</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">+組隊×5（最後一次）</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">42</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(155,114,245,0.15); color:#b89ef8; border:1px solid rgba(155,114,245,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🌟 黃金楓葉商店全部計劃可兌換！</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">GL 31個 → 用 25 → 剩 6（經驗券×15 + 紅藥水×10組）</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 4 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/7 ～ 5/13</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 14,100</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 31</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">組隊任務無GL（第4次=椅子）</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">56</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 楓葉×2500</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 56 → 再用 25（累計 45）→ 剩 11</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 5 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/14 ～ 5/20</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 17,400</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 31</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">第5/6週組隊任務無GL</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">70</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 高級瞬移石×10</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 70 → 再用 20（累計 65）→ 剩 5</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2); font-weight:700;">第 6 週</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); color:var(--text2);">5/21 ～ 5/27</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-leaf">≥ 20,700</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-gl">≥ 31</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">兌換菇菇GL後+3→34</div></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border); text-align:right;"><span class="tag tag-coin">84</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--border);">
+            <span style="display:inline-block; background:rgba(224,82,82,0.15); color:var(--coin); border:1px solid rgba(224,82,82,0.3); border-radius:4px; font-size:11px; padding:2px 8px; font-weight:700;">🪙 菇菇商店：可兌換 黃金楓葉×3（最後）</span>
+            <div style="font-size:11px; color:var(--text3); margin-top:4px;">幣 84 → 再用 15（累計 80）→ 剩 4，無法繼續兌換</div>
+          </td>
+        </tr>
+        <tr style="background:var(--bg3);">
+          <td style="padding:10px 12px; color:var(--text); font-weight:700;">5/28</td>
+          <td style="padding:10px 12px; color:var(--text2);">活動結束</td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-leaf">≥ 22,900</span></td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-gl">≥ 34</span><div style="font-size:11px; color:var(--text3); text-align:right; margin-top:2px;">兌換後剩 ≥ 9</div></td>
+          <td style="padding:10px 12px; text-align:right;"><span class="tag tag-coin" style="background:var(--bg4); color:var(--text2); border-color:var(--border2);">4（剩餘）</span></td>
+          <td style="padding:10px 12px; color:var(--text2); font-size:12px;">維護前完成所有兌換</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:4px;">
+    <div class="card-title" style="margin-bottom:12px;">📌 兌換時程一覽</div>
+    <div style="display:flex; flex-direction:column; gap:0;">
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--purple); padding-top:1px;">第3週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/6 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🌟 <strong>黃金楓葉商店：全部計劃兌換完畢</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積 GL 31個（第3次組隊任務後達標），用 25 → 經驗2倍券×15 + 高濃縮紅色藥水×10組。剩餘 6 個繼續累積。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第2週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">4/29 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店①：兌換 經驗2倍券×10</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 28，用 20 幣。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第4週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/13 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店②：兌換 楓葉×2500（5組）</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 56，再用 25 幣（累計 45）。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第5週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/20 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店③：兌換 高級瞬移石×10（換滿上限）</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 70，再用 20 幣（累計 65）。</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:12px; padding:10px 0;">
+        <div style="min-width:80px; font-size:12px; font-weight:700; color:var(--coin); padding-top:1px;">第6週結束<br><span style="font-size:11px; color:var(--text3); font-weight:400;">5/27 以後</span></div>
+        <div style="flex:1;">
+          <div style="font-size:13px; color:var(--text); margin-bottom:4px;">🪙 <strong>菇菇商店④（最後）：兌換 黃金楓葉×3</strong></div>
+          <div style="font-size:12px; color:var(--text2);">累積幣 84，再用 15 幣（累計 80），剩 4 幣無法再換。<span style="color:var(--text3);"> 活動結束前完成！</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:rgba(155,114,245,0.06); border-color:rgba(155,114,245,0.2);">
+    <div style="font-size:13px; color:#c4b0f8; line-height:1.8;">
+      <strong style="color:#b89ef8;">💡 注意事項</strong><br>
+      ・楓葉數字未含狩獵掉落與栽培楓樹機率掉落，實際到手會<strong>更多</strong>。<br>
+      ・黃金楓葉未含每週蠟燭任務（數量未公布）與栽培楓樹機率掉落，實際也會更多。<br>
+      ・週次以週四重置為基準，第1週從 4/16（活動開始日）算起。<br>
+      ・菇菇商店金幣帳號總限額不隨日重置，不急著換，可依優先序按時程慢慢兌換。
+    </div>
+  </div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-' + id).classList.add('active');
+  const ids = ['daily','weekly','once','shops','total','plan','hottime','progress'];
+  document.querySelectorAll('.nav-btn')[ids.indexOf(id)].classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Build calendar
+(function() {
+  const phase1 = new Set();
+  const phase2 = new Set();
+  const thu = new Set();
+
+  // Phase 1: 4/17-19, 4/24-26
+  [[17,4],[18,4],[19,4],[24,4],[25,4],[26,4]].forEach(([d,m]) => phase1.add(m+'/'+d));
+  // Phase 2: 5/1-3, 5/8-10, 5/15-17, 5/22-24
+  [[1,5],[2,5],[3,5],[8,5],[9,5],[10,5],[15,5],[16,5],[17,5],[22,5],[23,5],[24,5]].forEach(([d,m]) => phase2.add(m+'/'+d));
+  // Thursdays
+  [[16,4],[23,4],[30,4],[7,5],[14,5],[21,5],[28,5]].forEach(([d,m]) => thu.add(m+'/'+d));
+
+  // Build weeks Apr 16 - May 28
+  const start = new Date(2026, 3, 16); // Apr 16
+  const end = new Date(2026, 4, 28);   // May 28
+  // find Monday before or on start
+  const startDay = start.getDay(); // 4 = Thursday
+  const monday = new Date(start);
+  monday.setDate(start.getDate() - ((startDay + 6) % 7));
+
+  const body = document.getElementById('calendar-body');
+  let cur = new Date(monday);
+  let html = '';
+  while (cur <= end) {
+    html += '<tr>';
+    for (let i = 0; i < 7; i++) {
+      const d = cur.getDate();
+      const m = cur.getMonth() + 1;
+      const key = m + '/' + d;
+      const inRange = cur >= start && cur <= end;
+      let bg = '';
+      let extra = '';
+      if (inRange) {
+        if (phase2.has(key)) bg = 'background:rgba(245,184,48,0.2);';
+        else if (phase1.has(key)) bg = 'background:rgba(232,98,42,0.2);';
+        if (thu.has(key)) bg = 'background:rgba(61,186,126,0.15);';
+      }
+      const textColor = inRange ? 'color:var(--text);' : 'color:var(--text3);';
+      const isToday = (d === 16 && m === 4) ? 'outline:1px solid var(--maple);' : '';
+      let label = '';
+      if (phase1.has(key) && inRange) label = '<div style="font-size:9px;color:var(--maple-l);">HT1</div>';
+      if (phase2.has(key) && inRange) label = '<div style="font-size:9px;color:var(--gold);">HT2</div>';
+      if (thu.has(key) && inRange) label += '<div style="font-size:9px;color:var(--green);">重置</div>';
+      html += `<td style="padding:5px 2px; ${bg} ${textColor} ${isToday} border-radius:4px;">${inRange ? d + (m===5?'<span style="font-size:9px;color:var(--text3);">/5</span>':'') : ''} ${label}</td>`;
+      cur.setDate(cur.getDate() + 1);
+    }
+    html += '</tr>';
+  }
+  body.innerHTML = html;
+})();
+</script>
+
+</body>
+</html>
